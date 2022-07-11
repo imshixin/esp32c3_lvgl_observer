@@ -24,7 +24,7 @@ typedef struct align_objs_t
 static const uint16_t screenWidth = 160;
 static const uint16_t screenHeight = 80;
 const char *ssid = "nova 5 Pro";
-const char *passwd = "81297311";
+const char *passwd = "12345678";
 const int port = 34567;
 
 struct Data
