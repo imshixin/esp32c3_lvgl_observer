@@ -12,6 +12,7 @@
 LV_FONT_DECLARE(iconfont_symbol);
 
 extern WIFIManager wm;
+extern int port;
 // extern data_t datas;
 
 UIManager::UIManager(){
@@ -26,10 +27,11 @@ void UIManager::load_scr(screen_type st){
   switch (st)
   {
   case UM_SCR_IP_SHOW:
-    if(!wm.checkConn()){
-      load_scr(UM_SCR_WAIT_FOR_CONNECT);
-    }
-    lv_label_set_text(label_ip_show,("Connect It:\n" + WiFi.localIP().toString() + ":34567").c_str());
+    // if(!wm.checkConn()){
+    //   load_scr(UM_SCR_WAIT_FOR_CONNECT);
+    //   break;
+    // }
+    lv_label_set_text(label_ip_show,("Connect It:\n" + WiFi.localIP().toString() + ":"+String(port)).c_str());
     lv_scr_load(scr_ip_show);
     break;
   case UM_SCR_DATA_SHOW:
