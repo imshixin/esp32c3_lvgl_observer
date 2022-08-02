@@ -16,7 +16,7 @@ LV_FONT_DECLARE(iconfont_symbol);
 
 static const uint16_t screenWidth = 160;
 static const uint16_t screenHeight = 80;
-const int port = 34567; //端口
+int port = 34567; //端口
 
 data_t data;
 
